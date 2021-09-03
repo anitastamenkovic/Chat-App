@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <header>
+          <h1>ITBootcamp Chat</h1>
+          <h2>Choose a chatroom</h2>
+        </header>
+
+        <nav>
+          <button id="general" class="btn active">#general</button>
+
+          <button id="js" class="btn">#js</button>
+
+          <button id="homework" class="btn">#homework</button>
+
+          <button id="tests" class="btn">#tests</button>
+        </nav>
+
+        <section class="ulSection">
+          <ul>
+            <!-- Messages -->
+          </ul>
+        </section>
+
+        <section class="formSection">
+          <form id="colorChange">
+            <input type="color" id="favcolor" name="favcolor" value="#ffffff" />
+            <input
+              type="submit"
+              value="Update color"
+              id="btnColor"
+              class="btn"
+            />
+          </form>
+
+          <form id="formMessage">
+            <textarea
+              id="inputMessage"
+              rows="3"
+              cols="50"
+              placeholder="Your message..."
+            ></textarea>
+            <input type="submit" value="Send" id="btnSend" class="btn" />
+          </form>
+
+          <form id="formUsername">
+            <input
+              type="text"
+              placeholder="Update username"
+              id="inputUsername"
+            />
+            <input type="submit" value="Update" id="btnUpdate" class="btn" />
+            <p id="changedUsername" class="changed">
+              <!-- New username -->
+            </p>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script src="./src/dbcon.js"></script>
+
+    <!-- Custom js file -->
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
